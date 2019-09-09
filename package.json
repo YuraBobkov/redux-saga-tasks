@@ -1,0 +1,50 @@
+{
+  "name": "redux-saga-tasks",
+  "version": "0.1.0",
+  "description": "Storage of meta information for your tasks in redux-saga",
+  "repository": "exeto/redux-saga-tasks",
+  "main": "lib/index.js",
+  "author": "Timofey Dergachev <t@exeto.me> (https://exeto.me/en)",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "build": "rm -rf lib && babel src -d lib --ignore **/__tests__,**/*.test.js",
+    "codecov": "codecov --token=$CODECOV_TOKEN -F core",
+    "size": "yarn build && size-limit",
+    "test": "yarn lint && jest --passWithNoTests --coverage && yarn size",
+    "prepublishOnly": "yarn test",
+    "precommit": "lint-staged"
+  },
+  "files": [
+    "lib",
+    "src",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "keywords": [
+    "redux",
+    "redux-saga"
+  ],
+  "peerDependencies": {
+    "redux-saga": "^1.0.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@size-limit/preset-small-lib": "^2.1.4",
+    "codecov": "^3.5.0",
+    "eslint": "^6.2.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^3.0.0",
+    "jest": "^24.9.0",
+    "lerna": "^3.4.3",
+    "lint-staged": "^9.1.0",
+    "prettier": "^1.16.4",
+    "redux-saga": "^1.0.5"
+  }
+}
