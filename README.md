@@ -2,6 +2,8 @@
 
 > Storage of meta information for your tasks in redux-saga
 
+**Note:** your project should use [regenerator-runtime](https://www.npmjs.com/package/regenerator-runtime)
+
 ## Install
 
 ```sh

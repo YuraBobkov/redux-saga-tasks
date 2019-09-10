@@ -4,6 +4,7 @@
   "description": "Storage of meta information for your tasks in redux-saga",
   "repository": "exeto/redux-saga-tasks",
   "main": "lib/index.js",
+  "module": "src/index.js",
   "author": "Timofey Dergachev <t@exeto.me> (https://exeto.me/en)",
   "license": "MIT",
   "scripts": {
