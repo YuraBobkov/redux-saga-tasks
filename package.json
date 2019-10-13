@@ -10,9 +10,9 @@
   "scripts": {
     "lint": "eslint .",
     "build": "rm -rf lib && babel src -d lib --ignore **/__tests__,**/*.test.js",
-    "codecov": "codecov --token=$CODECOV_TOKEN -F core",
+    "codecov": "codecov --token=$CODECOV_TOKEN",
     "size": "yarn build && size-limit",
-    "test": "yarn lint && jest --passWithNoTests --coverage && yarn size",
+    "test": "yarn lint && jest --coverage && yarn size",
     "prepublishOnly": "yarn test",
     "precommit": "lint-staged"
   },
@@ -46,6 +46,7 @@
     "lerna": "^3.4.3",
     "lint-staged": "^9.1.0",
     "prettier": "^1.16.4",
-    "redux-saga": "^1.0.5"
+    "redux-saga": "^1.0.5",
+    "regenerator-runtime": "^0.13.3"
   }
 }

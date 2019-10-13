@@ -1,4 +1,4 @@
-import { put } from 'redux-saga/effects';
+import { put, call } from 'redux-saga/effects';
 
 import { failure, start, success } from './actions';
 import { pick } from './utils';
@@ -10,7 +10,7 @@ const createTaskSaga = saga =>
     yield put(start({ id: taskId }));
 
     try {
-      const data = yield* saga(action);
+      const data = yield call(saga, action);
 
       yield put(success({ id: taskId, data }));
     } catch (error) {

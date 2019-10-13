@@ -1,0 +1,23 @@
+---
+kind: pipeline
+name: default
+
+steps:
+  - name: install
+    image: node:10.16.3-alpine
+    commands:
+      - yarn install
+
+  - name: test
+    image: node:10.16.3-alpine
+    commands:
+      - yarn test
+      - apk add --no-cache git
+      - yarn codecov
+    environment:
+      CODECOV_TOKEN:
+        from_secret: codecov-token
+
+---
+kind: signature
+hmac: 286c6daa93b42cbfa2de0d15f04fa51befd3f41b7966eeafff2367ba8312698d
