@@ -1,6 +1,10 @@
+# 0.2.1 / 2019-12-19
+
+- Fixed failure when error is null
+
 # 0.2.0 / 2019-09-10
 
-- Add module field to package.json
+- Added module field to package.json
 
 # 0.1.0 / 2019-09-09
 
