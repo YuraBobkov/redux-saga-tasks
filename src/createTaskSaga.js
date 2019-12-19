@@ -17,7 +17,7 @@ const createTaskSaga = saga =>
       yield put(
         failure({
           id: taskId,
-          error: pick(['name', 'message', 'stack'], error),
+          error: error ? pick(['name', 'message', 'stack'], error) : null,
         }),
       );
     }

@@ -49,4 +49,19 @@ describe('creating task saga', () => {
     expect(iterator.next().value).toBe(null);
     expect(iterator.next().done).toBe(true);
   });
+
+  it('should put start and error actions with nullable error value', () => {
+    const id = 42;
+    const action = { meta: { taskId: id } };
+    const iterator = taskSaga(action);
+    const error = null;
+
+    expect(iterator.next().value).toEqual(put(start({ id })));
+    expect(iterator.next().value).toEqual(call(saga, action));
+    expect(iterator.throw(error).value).toEqual(
+      put(failure({ id, error: null })),
+    );
+    expect(iterator.next().value).toBe(null);
+    expect(iterator.next().done).toBe(true);
+  });
 });
