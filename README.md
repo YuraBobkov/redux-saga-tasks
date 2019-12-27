@@ -105,6 +105,21 @@ const List = () => {
 };
 ```
 
+### Custom parseError
+
+By default, error gets name, message, and stack from the error object. This behavior can be changed:
+
+```js
+function* watchFindItems() {
+  yield takeEvery(
+    'FIND_ITEMS',
+    createTaskSaga(findItems, {
+      parseError: err => err.response.data,
+    }),
+  );
+}
+```
+
 ## License
 
 [MIT](LICENSE.md) © [Timofey Dergachev](https://exeto.me/en)
