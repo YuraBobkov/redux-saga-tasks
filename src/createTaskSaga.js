@@ -3,8 +3,12 @@ import { put, call } from 'redux-saga/effects';
 import { failure, start, success } from './actions';
 import { pick } from './utils';
 
-const createTaskSaga = saga =>
+const defaultParseError = err =>
+  err ? pick(['name', 'message', 'stack'], err) : null;
+
+const createTaskSaga = (saga, options = {}) =>
   function* taskSaga(action) {
+    const { parseError = defaultParseError } = options;
     const { taskId } = action.meta;
 
     yield put(start({ id: taskId }));
@@ -13,11 +17,11 @@ const createTaskSaga = saga =>
       const data = yield call(saga, action);
 
       yield put(success({ id: taskId, data }));
-    } catch (error) {
+    } catch (err) {
       yield put(
         failure({
           id: taskId,
-          error: error ? pick(['name', 'message', 'stack'], error) : null,
+          error: parseError(err),
         }),
       );
     }
