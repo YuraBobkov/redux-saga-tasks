@@ -1,3 +1,7 @@
+# 0.3.0 / 2019-12-27
+
+- Added ability to change the error parsing
+
 # 0.2.1 / 2019-12-19
 
 - Fixed failure when error is null

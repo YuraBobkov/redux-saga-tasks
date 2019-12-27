@@ -1,6 +1,6 @@
 {
   "name": "redux-saga-tasks",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Storage of meta information for your tasks in redux-saga",
   "repository": "exeto/redux-saga-tasks",
   "main": "lib/index.js",
