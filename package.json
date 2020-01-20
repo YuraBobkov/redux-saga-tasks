@@ -44,7 +44,7 @@
     "husky": "^4.0.7",
     "jest": "^24.9.0",
     "lerna": "^3.4.3",
-    "lint-staged": "^9.1.0",
+    "lint-staged": "^10.0.0",
     "prettier": "^1.16.4",
     "redux-saga": "^1.0.5",
     "regenerator-runtime": "^0.13.3"
