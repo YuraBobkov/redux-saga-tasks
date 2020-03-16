@@ -122,4 +122,4 @@ function* watchFindItems() {
 
 ## License
 
-[MIT](LICENSE.md) © [Timofey Dergachev](https://exeto.me/en)
+[MIT](LICENSE.md) © [Timofey Dergachev](https://exeto.me)

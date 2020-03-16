@@ -5,7 +5,7 @@
   "repository": "exeto/redux-saga-tasks",
   "main": "lib/index.js",
   "module": "src/index.js",
-  "author": "Timofey Dergachev <t@exeto.me> (https://exeto.me/en)",
+  "author": "Timofey Dergachev <t@exeto.me> (https://exeto.me)",
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
