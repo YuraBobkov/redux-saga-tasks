@@ -1,12 +1,12 @@
 const getTask = (state, id) => state.tasks[id];
 
-const createGetProp = key => (state, id) => {
+const createGetProp = (key) => (state, id) => {
   const task = getTask(state, id);
 
   return task ? task[key] : null;
 };
 
-const createGetBoolProp = key => {
+const createGetBoolProp = (key) => {
   const getProp = createGetProp(key);
 
   return (state, id) => getProp(state, id) || false;

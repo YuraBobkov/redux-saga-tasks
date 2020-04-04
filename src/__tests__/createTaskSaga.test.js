@@ -67,7 +67,7 @@ describe('creating task saga', () => {
 
   it('should check custom parseError', () => {
     const taskSagaWithCustomError = createTaskSaga(saga, {
-      parseError: err => err.name,
+      parseError: (err) => err.name,
     });
 
     const id = 42;

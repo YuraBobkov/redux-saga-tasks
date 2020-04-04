@@ -3,7 +3,7 @@ import { put, call } from 'redux-saga/effects';
 import { failure, start, success } from './actions';
 import { pick } from './utils';
 
-const defaultParseError = err =>
+const defaultParseError = (err) =>
   err ? pick(['name', 'message', 'stack'], err) : null;
 
 const createTaskSaga = (saga, options = {}) =>

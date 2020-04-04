@@ -10,7 +10,7 @@ const createIdGenerator = () => {
 
 export const getId = createIdGenerator();
 
-export const createAction = (type, createMeta) => payload => {
+export const createAction = (type, createMeta) => (payload) => {
   const action = { type };
 
   if (payload !== undefined) {

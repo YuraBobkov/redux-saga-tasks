@@ -2,7 +2,7 @@ import { getIsFinished, getIsRunning, getData, getError } from '../selectors';
 
 const id = 42;
 
-const createState = value => ({
+const createState = (value) => ({
   tasks: {
     [id]: value,
   },
